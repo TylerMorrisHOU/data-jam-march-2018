@@ -1,11 +1,14 @@
 library('ggmap')
 
-# just opening everything up to see what's in it
+# reads the dataset into a series of R tables
 
 alldata <- readRDS('txdot_cris_crashdata_201601_201802.rds')
+
 crashes <- alldata$crashes
 units <- alldata$units
 persons <- alldata$persons
+
+rm(alldata)
 
 # identifies transit bus crashes in the list of crashes
 
